@@ -18,5 +18,11 @@ html.dark {
   @apply mb-28 max-w-[50rem] text-center sm:mb-0 scroll-mt-[100rem] relative w-full min-h-screen flex flex-col items-center justify-center;
 }
 
+.bg-hero {
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+
 
 

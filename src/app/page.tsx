@@ -15,9 +15,9 @@ export default function Home() {
      <Hero />
      <Brief />
      <Services />
-     <Fleet />
      <PersonalInjury />
      <CreditHire />
+     <Fleet />
      <Contact />
      <Footer />
     </main>
