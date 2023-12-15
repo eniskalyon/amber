@@ -16,7 +16,7 @@ export default function Fleet() {
   };
 
   return (
-    <section className='mb-28 max-w-[50rem] text-center sm:mb-0 scroll-mt-[100rem] relative w-full items-center md:justify-end
+    <section className='my-28 max-w-[50rem] text-center sm:mb-0 scroll-mt-[100rem] relative w-full items-center md:justify-end
     p-4
    border-2 border-opacity-40 shadow-lg
    shadow-black/[0.03] backdrop-blur-[0.5rem] rounded-lg mx-auto flex flex-col md:flex-row-reverse'>

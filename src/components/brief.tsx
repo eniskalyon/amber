@@ -6,16 +6,7 @@ import { motion } from 'framer-motion';
 
 export default function Brief() {
 
-  const variants = {
-    hidden: { opacity: 0, y: 50 },
-    visible: { opacity: 1, y: 0 },
-    exit: { opacity: 0, y: -50 }
-  };
-
-  const flipVariants = {
-    hidden: { rotateY: 90, opacity: 0 },
-    visible: { rotateY: 0, opacity: 1, transition: { duration: 0.8 } },
-  };
+ 
 
   const springVariants = {
     hidden: { scale: 0.8, opacity: 0 },
