@@ -16,16 +16,32 @@ export default function Contact() {
     whileInView={{ opacity: 1 }}
     transition={{ duration: 1 }}
     >
-        <SectionHeading>Contact Me</SectionHeading>
-        <p className='text-gray-700 -mt-6'>Please contact me directly at <a href="mailto:eniskalyon@gmail.com" className='underline'>eniskalyon@gmail.com</a>{" "} or through this form.</p>
+        <SectionHeading>Let's get you covered!</SectionHeading>
+        <div className='flex flex-col gap-1'>
+          <p className='text-gray-700 -mt-6'>Fill out the form below to get in contact with our Accident Claims team.
+          </p>
+          <br />
+          <p className='text-gray-700 -mt-6'>
+          Our advisers will get back to you as soon as possible.</p>
+        </div>
         <form action={async (formData) => {
-            await sendEmail(formData);
+    await sendEmail(formData);
 
-        }} className='mt-10 flex flex-col'>
-            <input name="senderEmail" className='h-14 px-4 rounded-lg border borderBlack' type="email" required maxLength={500} placeholder='Your email'/>
-            <textarea name="message" className='h-52 my-3 rounded-lg borderBlack p-4' required maxLength={5000} placeholder='Your message'/>
-            <SubmitBtn />
-        </form>
+}} className='mt-10 flex flex-col'>
+    <input name="name" className='h-14 px-4 rounded-lg border borderBlack' type="text" required maxLength={100} placeholder='Your name'/>
+    <input name="telephone" className='h-14 px-4 my-3 rounded-lg border borderBlack' type="tel" required maxLength={15} placeholder='Telephone number'/>
+    <input name="accidentDate" className='h-14 px-4 my-3 rounded-lg border borderBlack' type="date" required placeholder='Accident date'/>
+    <p className='text-gray-700 pb-2 pt-6'>Check below if you would like to claim personal injury, credit hire, or both (optional)</p>
+    <div className='flex items-center pb-6 justify-center gap-4 text-xl'>
+        <label><input type="checkbox" className='form-checkbox h-5 w-5' name="personalInjury" /> Personal Injury</label>
+        <label><input type="checkbox" className='form-checkbox h-5 w-5' name="creditHire" /> Credit Hire</label>
+    </div>
+    <input name="senderEmail" className='h-14 px-4 my-3 rounded-lg border borderBlack' type="email" maxLength={500} placeholder='Your email (optional)'/>
+    {/* <textarea name="message" className='h-52 my-3 rounded-lg borderBlack p-4' required maxLength={5000} placeholder='Your message'/> */}
+    <input name="accidentImages" className='h-14 px-4 my-3' type="file" multiple/>
+    <SubmitBtn />
+</form>
+
     </motion.section>
   )
 }
