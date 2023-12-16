@@ -1,11 +1,15 @@
 "use client"
 
 import React from 'react';
+import { useSectionInView } from '@/lib/hooks';
 import { motion } from 'framer-motion';
 import { MdOutlinePersonalInjury } from "react-icons/md";
 import { FaTaxi, FaParking } from "react-icons/fa";
 import { GiTowTruck } from "react-icons/gi";
 export default function Services() {
+
+  const { ref } = useSectionInView('Services');
+
 
   const iconSize = 60;
   const iconColor ="#fde68a";
@@ -22,7 +26,9 @@ export default function Services() {
 
   
   return (
-    <section className='container-section' id='services'>
+    <section  id="services" ref={ref} className='container-section'
+  
+    >
       <h1 className='text-4xl font-bold mb-4'>24/7 at your service</h1>
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
