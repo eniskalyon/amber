@@ -8,7 +8,7 @@ import { FaTaxi, FaParking } from "react-icons/fa";
 import { GiTowTruck } from "react-icons/gi";
 export default function Services() {
 
-  const { ref } = useSectionInView('Services');
+  const { ref } = useSectionInView('Services', 0.5);
 
 
   const iconSize = 60;
@@ -26,14 +26,14 @@ export default function Services() {
 
   
   return (
-    <section  id="services" ref={ref} className='container-section'
+    <section ref={ref}   id="services"  className='container-section'
   
     >
       <h1 className='text-4xl font-bold mb-4'>24/7 at your service</h1>
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
         {/* Card 1 */}
-        <motion.div className="bg-white rounded-lg shadow-md p-6 card-services"
+        <motion.div className="bg-white rounded-lg shadow-md  card-services"
         initial="hidden"
         whileInView="visible"
         exit="exit"
@@ -46,7 +46,7 @@ Our service is tailored to your needs;
 including Prestige and Hybrid taxi vehicles.</p>
         </motion.div>
         {/* Card 2 */}
-        <motion.div className="bg-white rounded-lg shadow-md p-6 card-services"
+        <motion.div className="bg-white rounded-lg shadow-md  card-services"
         initial="hidden"
         whileInView="visible"
         exit="exit"
@@ -59,7 +59,7 @@ Therefore we work with various leading personal injury solicitors in Birmingham 
 Contact us to learn more about the possible options for your claim.</p>
         </motion.div>
         {/* Card 3 */}
-        <motion.div className="bg-white rounded-lg shadow-md p-6 card-services"
+        <motion.div className="bg-white rounded-lg shadow-md  card-services"
         initial="hidden"
         whileInView="visible"
         exit="exit"
@@ -71,7 +71,7 @@ Contact us to learn more about the possible options for your claim.</p>
 This is why we provide safe storage services.</p>
         </motion.div>
         {/* Card 4 */}
-        <motion.div className="bg-white rounded-lg shadow-md p-6 card-services"
+        <motion.div className="bg-white rounded-lg shadow-md  card-services"
         initial="hidden"
         whileInView="visible"
         exit="exit"

@@ -1,9 +1,14 @@
 "use client"
 
 import React, { useEffect } from 'react';
+import { useSectionInView } from '@/lib/hooks';
+
 import Image from 'next/image';
 
 export default function Hero() {
+
+const { ref } = useSectionInView('Home');
+
     const handleScroll = () => {
         const offset = window.pageYOffset;
         const parallaxElement = document.querySelector('.parallax') as HTMLElement | null;
@@ -20,7 +25,7 @@ export default function Hero() {
   }, []);
 
   return (
-    <section className='mb-28 max-w-[80rem] text-center sm:mb-0 scroll-mt-[100rem] relative w-full min-h-screen flex items-center justify-center'>
+    <section ref={ref} id='home' className='mb-28 max-w-[80rem] text-center sm:mb-0 scroll-mt-[100rem] relative w-full min-h-screen flex items-center justify-center'>
       <div className='parallax bg-no-repeat w-full h-full absolute bottom-40 lg:top-0 lg:left-0 z-[-1]' style={{ backgroundImage: 'url(/amber-hero-lg.png)', backgroundSize: 'cover' }}>
         {/* Removed <Image> component to use CSS background for parallax */}
       </div>
