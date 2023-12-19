@@ -29,7 +29,19 @@ html.dark {
 }
 
 .btn-contact {
-  @apply w-[15rem] mt-16 bg-amber-400 hover:bg-amber-500 text-white text-3xl font-bold py-2 px-4 rounded-xl
+  @apply w-[15rem] bg-amber-400 hover:bg-amber-500 text-white text-3xl font-bold py-2 px-4 rounded-xl
+}
+
+.call-us-red {
+  @apply text-red-700 hover:text-white border border-red-700 hover:bg-red-800 focus:ring-4 focus:outline-none focus:ring-red-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2 dark:border-red-500 dark:text-red-500 dark:hover:text-white dark:hover:bg-red-600 dark:focus:ring-red-900
+}
+
+.call-us-sky {
+  @apply text-sky-700 hover:text-white border border-sky-700 hover:bg-sky-800 focus:ring-4 focus:outline-none focus:ring-sky-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2 dark:border-sky-500 dark:text-sky-500 dark:hover:text-white dark:hover:bg-sky-600 dark:focus:ring-sky-900
+}
+
+.hero__text-p {
+  @apply text-xl italic bg-opacity-80 px-4 py-2 bg-white sm:rounded-full
 }
 
 

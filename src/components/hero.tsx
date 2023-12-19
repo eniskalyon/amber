@@ -4,6 +4,7 @@ import React, { useEffect } from 'react';
 import { useSectionInView } from '@/lib/hooks';
 
 import Image from 'next/image';
+import CallUsButton from './CallUsButton';
 
 export default function Hero() {
 
@@ -34,10 +35,13 @@ const { ref } = useSectionInView('Home');
          '>
         <h1 className='text-4xl sm:bg-white shadow-lg
          shadow-black/[0.03] backdrop-blur-[0.5rem] bg-opacity-40 px-4 py-2 sm:rounded-full text-slate-500 font-bold mb-4'>Amber Accident Claims</h1>
-        <p className='text-xl italic bg-opacity-80 px-4 py-2 bg-white sm:rounded-full'>Leading accident claims management in West Midlands.</p>
-        <button className="w-[15rem] mt-16 bg-amber-400 hover:bg-amber-500 text-white text-3xl font-bold font py-2 px-4 rounded-full">
+        <p className='hero__text-p'>Leading accident claims management in West Midlands.</p>
+        <a href="#contact"><button className="w-[15rem] mt-16 bg-amber-400 hover:bg-amber-500 text-white text-3xl font-bold font py-2 px-4 rounded-full">
   Make a claim
-</button>
+</button></a>
+
+<p className='hero__text-p'>or call us at:</p>
+<CallUsButton className="sky"/>
 
       </div>
     </section>

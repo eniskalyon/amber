@@ -50,7 +50,7 @@ export default function Brief() {
     variants={springVariants}
        >
           <FaAward size={80} /> {/* React icon with specified size */}
-          <p className="font-semibold text-md md:mt-12">Over 12 years' experience</p>
+          <p className="font-semibold text-md md:mt-12">Over 13 years' experience</p>
         </motion.div>
       </div>
     </section>

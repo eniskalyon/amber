@@ -38,7 +38,7 @@ export default function Contact() {
    
    
    <input name="senderEmail" className='h-14 px-4 my-3 rounded-lg border borderBlack' type="email" maxLength={500} placeholder='Your email (optional)'/>
-  <p>Add any accident related images</p>
+  <p>You can add any accident related images by clicking below</p>
     <input name="accidentImages" className='h-14 px-4 my-3' type="file" multiple/>
    
 

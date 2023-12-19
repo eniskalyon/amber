@@ -43,7 +43,7 @@ export default function RootLayout({
 
 <FloatingButton
   icon={FaMapMarkerAlt}
-  link="https://goo.gl/maps/dudleyroadlink"
+  link="https://www.google.com/maps/place/Amber+Accident+Claims/@52.4863009,-1.9401358,17z/data=!3m1!4b1!4m6!3m5!1s0x4870bd1b06089047:0x4162c65993acaddd!8m2!3d52.4863009!4d-1.9401358!16s%2Fg%2F1tdltqgd?entry=ttu"
   position="top-24 right-4 fixed hidden xl:flex"
   backgroundColor="bg-red-500"
   hoverColor="hover:bg-red-600"
@@ -51,7 +51,7 @@ export default function RootLayout({
 />
 <FloatingButton
   icon={FaMapMarkerAlt}
-  link="https://goo.gl/maps/alumrocklink"
+  link="https://www.google.com/maps/place/Amber+Accident+Claims+Ltd/@52.4882217,-1.8437388,15z/data=!4m2!3m1!1s0x0:0x8ab6fd8643997c8a?sa=X&ved=2ahUKEwjMqfHDnPX8AhWpi_0HHedFDXIQ_BJ6BAhKEAg"
   position="hidden top-40 right-4 fixed hidden xl:flex"
   backgroundColor="bg-yellow-500"
   hoverColor="hover:bg-yellow-600"

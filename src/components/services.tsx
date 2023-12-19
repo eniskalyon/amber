@@ -6,6 +6,7 @@ import { motion } from 'framer-motion';
 import { MdOutlinePersonalInjury } from "react-icons/md";
 import { FaTaxi, FaParking } from "react-icons/fa";
 import { GiTowTruck } from "react-icons/gi";
+import CallUsButton from './CallUsButton';
 export default function Services() {
 
   const { ref } = useSectionInView('Services');
@@ -71,7 +72,7 @@ This is why we provide safe storage services.</p>
           <GiTowTruck size={iconSize} color={iconColor} />
           <h2 className="font-semibold text-lg mb-2">Recovery</h2>
           <p>Does your vehicle need a recovery service to be taken off the road? Call us on the number below 24/7</p>
-          <button type="button" className='text-red-700 hover:text-white border border-red-700 hover:bg-red-800 focus:ring-4 focus:outline-none focus:ring-red-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2 dark:border-red-500 dark:text-red-500 dark:hover:text-white dark:hover:bg-red-600 dark:focus:ring-red-900'>01214565566</button>
+          <CallUsButton className="red" />
         </div>
       </div>
     </motion.section>
