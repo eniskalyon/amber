@@ -40,7 +40,7 @@ const { ref } = useSectionInView('Home');
   Make a claim
 </button></a>
 
-<p className='hero__text-p'>or call us at:</p>
+<p className='hero__text-p'>or call us 24/7 at:</p>
 <CallUsButton className="sky"/>
 
       </div>

@@ -19,8 +19,6 @@ const SectionParallax = forwardRef<HTMLDivElement, SectionParallaxProps>(({ back
       {/* <div className="absolute inset-0 bg-black bg-opacity-30 flex justify-center items-center rounded-lg"> */}
       <div className="text-slate-700 rounded-xl bg-white bg-opacity-70 font-bold p-1">
       <h1 className='text-4xl font-bold m-2'>{title}</h1>
-
-      
         </div>
         <div className="text-slate-700 rounded-xl bg-white bg-opacity-80 font-bold p-4 md:p-8">
           {textContent}

@@ -27,7 +27,7 @@ export default function RootLayout({
         {children}
         <FloatingButton
   icon={FaWhatsapp}
-  link="https://wa.me/yourwhatsappnumber"
+  link="https://wa.me/+447951009239"
   position="fixed bottom-4 right-4"
   backgroundColor="bg-green-500"
   hoverColor="hover:bg-green-600"
@@ -35,7 +35,7 @@ export default function RootLayout({
 
 <FloatingButton
   icon={FaPhone}
-  link="tel:yourphonenumber"
+  link="tel:01214565566"
   position="fixed bottom-16 right-4" // Different positioning
   backgroundColor="bg-blue-500"
   hoverColor="hover:bg-blue-600"

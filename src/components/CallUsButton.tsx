@@ -7,6 +7,7 @@ type CallUsButtonProps = {
 
 export default function CallUsButton({className}: CallUsButtonProps) {
   return (
-    <button type="button" className={`call-us-${className}`}>01214565566</button>
+    <a   href="tel:01214565566"
+    type="button" className={`call-us-${className}`}>01214565566</a>
     )
 }

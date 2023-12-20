@@ -13,7 +13,7 @@ export default function Services() {
 
 
   const iconSize = 60;
-  const iconColor ="#fde68a";
+  const iconColor ="#eab308";
 
   const springVariants = {
     hidden: { scale: 0.8, opacity: 0 },

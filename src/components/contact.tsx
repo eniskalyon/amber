@@ -16,7 +16,7 @@ export default function Contact() {
     transition={{ duration: 1 }}
     >
         <SectionHeading>Let's get you covered!</SectionHeading>
-        <div className='flex flex-col gap-1'>
+        <div className='flex flex-col gap-1 mb-4'>
           <p className='text-gray-700 -mt-6'>Fill out the form below to get in contact with our Accident Claims team.
           </p>
           <br />
@@ -27,7 +27,7 @@ export default function Contact() {
     await sendEmail(formData);
 
 }} className='flex flex-col'>
-    <input name="name" className='px-4 rounded-lg border borderBlack' type="text" required maxLength={100} placeholder='Your name'/>
+    <input name="name" className='h-14 px-4 rounded-lg border borderBlack' type="text" required maxLength={100} placeholder='Your name'/>
     <input name="telephone" className='h-14 px-4 my-3 rounded-lg border borderBlack' type="tel" required maxLength={15} placeholder='Telephone number'/>
     <input name="accidentDate" className='h-14 px-4 my-3 rounded-lg border borderBlack' type="date" required placeholder='Accident date'/>
     <p className='text-gray-700 pb-2 pt-6'>Check below if you would like to claim personal injury, credit hire, or both (optional)</p>
