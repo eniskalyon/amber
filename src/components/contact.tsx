@@ -27,7 +27,7 @@ export default function Contact() {
     await sendEmail(formData);
 
 }} className='flex flex-col'>
-    <input name="name" className='h-14 px-4 rounded-lg border borderBlack' type="text" required maxLength={100} placeholder='Your name'/>
+    <input name="senderName" className='h-14 px-4 rounded-lg border borderBlack' type="text" required maxLength={100} placeholder='Your name'/>
     <input name="telephone" className='h-14 px-4 my-3 rounded-lg border borderBlack' type="tel" required maxLength={15} placeholder='Telephone number'/>
     <input name="accidentDate" className='h-14 px-4 my-3 rounded-lg border borderBlack' type="date" required placeholder='Accident date'/>
     <p className='text-gray-700 pb-2 pt-6'>Check below if you would like to claim personal injury, credit hire, or both (optional)</p>

@@ -8,8 +8,13 @@ import ContactFormEmail from "@/email/contact-form-email";
 const resend = new Resend(process.env.RESEND_API_KEY);
 
 export const sendEmail = async (formData: FormData) => {
+  const senderName = formData.get("senderName");
+  const telephone = formData.get("telephone");
+  const accidentDate = formData.get("accidentDate");
+  const personalInjury = formData.get("personalInjury");
+  const creditHire = formData.get("creditHire");
   const senderEmail = formData.get("senderEmail");
-  const message = formData.get("message");
+  const accidentImages = formData.get("accidentImages");
 
   // simple server-side validation
   if (!validateString(senderEmail, 500)) {
@@ -17,7 +22,7 @@ export const sendEmail = async (formData: FormData) => {
       error: "Invalid sender email",
     };
   }
-  if (!validateString(message, 5000)) {
+  if (!validateString(senderName, 5000)) {
     return {
       error: "Invalid message",
     };
@@ -31,7 +36,7 @@ export const sendEmail = async (formData: FormData) => {
       subject: "Message from contact form",
       reply_to: senderEmail,
       react: React.createElement(ContactFormEmail, {
-        message: message,
+        senderName: senderName,
         senderEmail: senderEmail,
       }),
     });

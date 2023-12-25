@@ -8,19 +8,30 @@ export const validateString = (
   
     return true;
   };
+
+  class CustomError extends Error {
+    senderName: string;
+  
+    constructor(message: string, senderName: string) {
+      super(message); // Call the parent constructor with the message
+      this.senderName = senderName;
+      this.name = this.constructor.name; // Set the error name to the class name
+    }
+  }
+  
   
   export const getErrorMessage = (error: unknown): string => {
-    let message: string;
+    let senderName: string;
   
-    if (error instanceof Error) {
-      message = error.message;
-    } else if (error && typeof error === "object" && "message" in error) {
-      message = String(error.message);
+    if (error instanceof CustomError) {
+      senderName = error.senderName;
+    } else if (error && typeof error === "object" && "senderName" in error) {
+      senderName = String(error.senderName);
     } else if (typeof error === "string") {
-      message = error;
+      senderName = error;
     } else {
-      message = "Something went wrong";
+      senderName = "Something went wrong";
     }
   
-    return message;
+    return senderName;
   };
