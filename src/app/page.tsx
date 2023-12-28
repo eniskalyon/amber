@@ -9,7 +9,7 @@ import Hero from "@/components/hero";
 import PersonalInjury from "@/components/personalInjury";
 import SectionDivider from "@/components/section-divider";
 import Services from "@/components/services";
-
+import { EmailComponent } from "@/components/contactTest";
 
 export default function Home() {
 
@@ -27,7 +27,8 @@ export default function Home() {
      <SectionDivider />
      <Fleet key="fleet" />
      <SectionDivider />
-     <Contact key="contact" />
+     {/* <Contact key="contact" /> */}
+     <EmailComponent />
      <Footer />
     </main>
   )

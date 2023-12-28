@@ -7,7 +7,7 @@ import ContactFormEmail from "@/email/contact-form-email";
 
 const resend = new Resend(process.env.RESEND_API_KEY);
 
-export const sendEmail = async (formData: FormData) => {
+export const sendEmail = async (formData: FormData, fileUrl: string) => {
   const senderName = formData.get("senderName");
   const telephone = formData.get("telephone");
   const accidentDate = formData.get("accidentDate");
@@ -16,6 +16,7 @@ export const sendEmail = async (formData: FormData) => {
   const senderEmail = formData.get("senderEmail");
   const accidentImages = formData.get("accidentImages");
 
+ 
   // simple server-side validation
   if (!validateString(senderEmail, 500)) {
     return {
@@ -35,6 +36,12 @@ export const sendEmail = async (formData: FormData) => {
       to: "eniskalyon@gmail.com",
       subject: "Message from contact form",
       reply_to: senderEmail,
+      attachments: [
+        {
+          filename: `Accident-${Date.now()}`,
+          path: fileUrl,
+        }
+      ],
       react: React.createElement(ContactFormEmail, {
         senderName: senderName,
         senderEmail: senderEmail,

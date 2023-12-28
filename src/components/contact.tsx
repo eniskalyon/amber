@@ -8,6 +8,7 @@ import SubmitBtn from './submit-btn'
 
 export default function Contact() {
     const { ref } = useSectionInView('Contact');
+    
 
   return (
     <motion.section id="contact" ref={ref} className='scroll-mt-28 mb-20 sm:mb-28 mt-44 w-[min(100%,38rem)] text-center'
@@ -23,10 +24,9 @@ export default function Contact() {
           <p className='text-gray-700 -mt-6'>
           Our advisers will get back to you as soon as possible.</p>
         </div>
-        <form action={async (formData) => {
-    await sendEmail(formData);
-
-}} className='flex flex-col'>
+        <form className='flex flex-col'
+        
+        >
     <input name="senderName" className='h-14 px-4 rounded-lg border borderBlack' type="text" required maxLength={100} placeholder='Your name'/>
     <input name="telephone" className='h-14 px-4 my-3 rounded-lg border borderBlack' type="tel" required maxLength={15} placeholder='Telephone number'/>
     <input name="accidentDate" className='h-14 px-4 my-3 rounded-lg border borderBlack' type="date" required placeholder='Accident date'/>
