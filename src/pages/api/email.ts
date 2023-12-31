@@ -42,21 +42,23 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
             const attachments = (await Promise.all(
                 Object.entries(files).flatMap(([key, fileList]) => {
                     if (!fileList) return [];
-                    return fileList.map(f => fs.readFile(f.filepath, { encoding: 'base64' }).then(content => ({
-                        content,
-                        filename: f.originalFilename,
-                        type: f.mimetype,
-                        disposition: 'attachment',
-                    })));
+                    return fileList.map((f) =>
+                        fs.readFile(f.filepath, { encoding: 'base64' }).then((content) => ({
+                            content,
+                            filename: f.originalFilename,
+                            type: f.mimetype,
+                            disposition: 'attachment',
+                        }))
+                    );
                 })
             )).filter((attachment): attachment is Attachment => attachment !== null);
 
             const msg = {
                 to: 'eniskalyon@gmail.com', // Change to your recipient
                 from: 'cuneicoder@gmail.com', // Change to your verified sender
-                subject: 'This is a simple message',
-                text: Array.isArray(fields.text) ? fields.text.join(' ') : fields.text || '',
-                html: '<strong>and some html</strong>',
+                subject: 'New Accident Report',
+                text: `Name: ${fields.senderName}\nTelephone: ${fields.telephone}\nAccident Date: ${fields.accidentDate}\nPersonal Injury: ${fields.personalInjury}\nCredit Hire: ${fields.creditHire}\nEmail: ${fields.senderEmail}`,
+                html: `<strong>New Accident Report</strong><br/>Name: ${fields.senderName}<br/>Telephone: ${fields.telephone}<br/>Accident Date: ${fields.accidentDate}<br/>Personal Injury: ${fields.personalInjury}<br/>Credit Hire: ${fields.creditHire}<br/>Email: ${fields.senderEmail}`,
                 attachments,
             };
 
