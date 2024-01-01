@@ -1,7 +1,6 @@
 "use client"
 
 import Brief from "@/components/brief";
-import Contact from "@/components/contact";
 import CreditHire from "@/components/creditHire";
 import Fleet from "@/components/fleet";
 import Footer from "@/components/footer";
