@@ -39,7 +39,7 @@ export default function Fleet() {
         </div>
 
 
-<div className='flex flex-col md:flex-row-reverse md:gap-[15rem] md:justify-end'>
+<div className='flex flex-col md:flex-row-reverse md:gap-[10rem] md:justify-end'>
           <div className='w-full flex md:flex-col '>
              <CarImage car={activeCar} />
           </div>
@@ -48,7 +48,7 @@ export default function Fleet() {
               {fleet.map((car: Car) => (
                 <button
                   key={car.id}
-                  className={`text-xl rounded-lg p-2 my-1 hover:bg-amber-300 ${activeCar.id === car.id ? 'bg-amber-700 text-white' : 'bg-gray-200'}`}
+                  className={`text-md rounded-lg px-2 py-1 lg:w-[8vw] flex my-1 hover:bg-amber-300 ${activeCar.id === car.id ? 'bg-amber-700 text-white' : 'bg-gray-200'}`}
                   onClick={() => setActiveCar(car)}
                 >
                   {car.name}

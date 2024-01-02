@@ -29,42 +29,42 @@ export const links = [
 export const fleet = [
   { 
     id: 1,
-    name: "Alhambra",
+    name: "Seat Alhambra",
     image: "alhambra.png",
   },
   {
     id: 2,
-    name: "Bmw",
+    name: "Bmw 5 Series",
     image: "bmw.png",
   },
   {
     id: 3,
-    name: "Corolla",
+    name: "Toyota Corolla",
     image: "corolla.png",
   },
   {
     id: 4,
-    name: "Galaxy",
+    name: "Ford Galaxy",
     image: "galaxy.png",
   },
   {
     id: 5,
-    name: "Mercedes",
+    name: "Mercedes Benz e-Class",
     image: "mercedes.png",
   },
   {
     id: 6,
-    name: "Prius",
+    name: "Toyota Prius",
     image: "prius.png",
   },
   {
     id: 7,
-    name: "Sharan",
+    name: "Volkswagen Sharan",
     image: "sharan.png",
   },
   {
     id: 8,
-    name: "Touran",
+    name: "Volkswagen Touran",
     image: "touran.png",
   }
 ] as const;
