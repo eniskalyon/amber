@@ -40,8 +40,8 @@ export const EmailComponent: React.FC = () => {
         formData.append('senderName', senderName);
         formData.append('telephone', telephone);
         formData.append('accidentDate', accidentDate);
-        formData.append('personalInjury', personalInjury.toString());
-        formData.append('creditHire', creditHire.toString());
+        formData.append('personalInjury', personalInjury ? 'yes' : 'not specified');
+        formData.append('creditHire', creditHire ? 'yes' : 'not specified');
         formData.append('senderEmail', senderEmail);
         accidentImages.forEach(image => formData.append('accidentImages', image));
 

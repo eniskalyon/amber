@@ -2,6 +2,12 @@ import * as sgMail from '@sendgrid/mail';
 import { NextApiRequest, NextApiResponse } from 'next';
 import { IncomingForm, File, Fields, Files } from 'formidable';
 import { promises as fs } from 'fs';
+import { EmailContent, EmailContentProps } from '@/email/EmailContent';
+import { renderToString } from 'react-dom/server';
+
+const EmailComponent: React.ComponentType<EmailContentProps> = EmailContent;
+
+
 
 interface FormidableFiles extends Files {
     [key: string]: File[] | undefined;
@@ -30,11 +36,24 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     const form = new IncomingForm();
 
     form.parse(req, async (err, fields: Fields, files: FormidableFiles) => {
+        const emailFields = {
+            senderName: Array.isArray(fields.senderName) ? fields.senderName[0] : fields.senderName || '',
+            telephone: Array.isArray(fields.telephone) ? fields.telephone[0] : fields.telephone || '',
+            accidentDate: Array.isArray(fields.accidentDate) ? fields.accidentDate[0] : fields.accidentDate || '',
+            personalInjury: (Array.isArray(fields.personalInjury) ? fields.personalInjury[0] : fields.personalInjury) === 'true',
+            creditHire: (Array.isArray(fields.creditHire) ? fields.creditHire[0] : fields.creditHire) === 'true',
+            senderEmail: Array.isArray(fields.senderEmail) ? fields.senderEmail[0] : fields.senderEmail || '',
+        };
+
+        const emailContent = renderToString(<EmailComponent fields={emailFields}/>);
+
         if (err) {
             console.error('Formidable error:', err);
             res.status(500).json({ error: 'Error parsing form data' });
             return;
         }
+      
+
 
         try {
             sgMail.setApiKey(process.env.SENDGRID_API_KEY as string);
@@ -53,14 +72,16 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
                 })
             )).filter((attachment): attachment is Attachment => attachment !== null);
 
-            const msg = {
-                to: 'eniskalyon@gmail.com', // Change to your recipient
-                from: 'cuneicoder@gmail.com', // Change to your verified sender
-                subject: 'New Accident Report',
-                text: `Name: ${fields.senderName}\nTelephone: ${fields.telephone}\nAccident Date: ${fields.accidentDate}\nPersonal Injury: ${fields.personalInjury}\nCredit Hire: ${fields.creditHire}\nEmail: ${fields.senderEmail}`,
-                html: `<strong>New Accident Report</strong><br/>Name: ${fields.senderName}<br/>Telephone: ${fields.telephone}<br/>Accident Date: ${fields.accidentDate}<br/>Personal Injury: ${fields.personalInjury}<br/>Credit Hire: ${fields.creditHire}<br/>Email: ${fields.senderEmail}`,
-                attachments,
-            };
+           
+           
+      const msg = {
+        to: 'eniskalyon@gmail.com', // Change to your recipient
+        from: 'cuneicoder@gmail.com', // Change to your verified sender
+        subject: 'New Accident Report',
+        text: `New Accident Report\\n\\n${emailContent}`,
+        html: emailContent,
+        attachments,
+      };
 
             await sgMail.send(msg);
             res.status(200).json({ message: 'Email sent successfully' });
