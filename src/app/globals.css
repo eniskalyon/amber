@@ -41,7 +41,7 @@ html.dark {
 }
 
 .hero__text-p {
-  @apply text-xl italic bg-opacity-80 px-4 py-2 bg-white sm:rounded-full
+  @apply italic bg-opacity-80 px-4 py-2 bg-white sm:rounded-full
 }
 
 

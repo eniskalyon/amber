@@ -100,8 +100,8 @@ export const EmailComponent: React.FC = () => {
                         className='h-14 px-4 my-3 rounded-lg border borderBlack' />
                     <p className='text-gray-700 pb-2 pt-6'>Check below if you would like to claim personal injury, credit hire, or both (optional)</p>
 
-                    <div className='flex items-center pb-6 justify-center gap-4 text-xl'>
-                        <label>
+                    <div className='flex items-center sm:items-stretch pb-6 justify-center gap-5 sm:gap-[6rem] text-xl'>
+                        <label className='flex gap-2'>
                             <input
                                 type="checkbox"
                                 checked={personalInjury}
@@ -109,7 +109,7 @@ export const EmailComponent: React.FC = () => {
                                 className='form-checkbox h-5 w-5' />
                             Personal Injury
                         </label>
-                        <label>
+                        <label className='flex gap-2'>
                             <input
                                 type="checkbox"
                                 checked={creditHire}
