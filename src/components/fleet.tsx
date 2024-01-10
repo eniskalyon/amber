@@ -34,7 +34,7 @@ export default function Fleet() {
      
       <div className="text-slate-700 rounded-xl bg-black bg-opacity-5 font-bold p-2 flex flex-col gap-1">
       <h1 className='text-2xl font-bold m-2'>Meet Our Brand New Fleet Of Courtesy Cars</h1>
-      <p className='italic text-slate-500'>Experience the privilege of working with Birmingham's best credit hire company. </p>
+      <p className='italic text-slate-500'>Experience the privilege of working with Birmingham&apos;s best credit hire company. </p>
       <p className='text-amber-700'>Taxi Plated Vehicles Available Within 24 hours!</p>
         </div>
 

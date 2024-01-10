@@ -19,7 +19,7 @@ export default function PersonalInjury() {
       
         </div>
         <div className="text-slate-700 rounded-xl bg-white bg-opacity-80 font-bold p-4 md:p-8">
-        To qualify for a road traffic accident compensation claim, the accident must have been all or partly someone's else's fault. Contact us to learn more.
+        To qualify for a road traffic accident compensation claim, the accident must have been all or partly someone else&apos;s fault. Contact us to learn more.
      
         </div>
       {/* </div> */}

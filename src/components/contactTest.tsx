@@ -66,7 +66,7 @@ export const EmailComponent: React.FC = () => {
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         transition={{ duration: 1 }}>
-             <SectionHeading>Let's get you covered!</SectionHeading>
+             <SectionHeading>Let&apos;s get you covered!</SectionHeading>
              {!formSubmitted ? ( <><div className='flex flex-col gap-1 mb-4'>
                 <p className='text-gray-700 -mt-6'>Fill out the form below to get in contact with our Accident Claims team.
                 </p>

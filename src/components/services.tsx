@@ -52,7 +52,7 @@ including Prestige and Hybrid taxi vehicles.</p>
         >
           <MdOutlinePersonalInjury size={iconSize} color={iconColor} />
           <h2 className="font-semibold text-lg mb-2">Personal Injury</h2>
-          <p>Your personal injury claim is as unique as everyone else's and it is dependant on the circumstances of the accident.
+          <p>Your personal injury claim is as unique as everyone else&apos;s and it is dependant on the circumstances of the accident.
 Therefore we work with various leading personal injury solicitors in Birmingham and throughout the UK to ensure the best outcome for your claim.
 Contact us to learn more about the possible options for your claim.</p>
         </div>

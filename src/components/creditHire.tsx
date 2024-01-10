@@ -19,7 +19,7 @@ export default function PersonalInjury() {
       
         </div>
         <div className="text-slate-700 rounded-xl bg-white bg-opacity-80 font-bold p-4 md:p-8">
-        If you were involved in a car accident that wasn't your fault, a Credit Hire Claim is the process of claiming the cost of hiring the replacement vehicle from the other driver's insurance company.
+        If you were involved in a car accident that wasn&apos;t your fault, a Credit Hire Claim is the process of claiming the cost of hiring the replacement vehicle from the other driver&apos;s insurance company.
 At Amber Accident Claims, we provide both Private and Public Hire Vehicles according to your needs so that you can recover from your financial, material and emotional damages as swift as possible.
 
         </div>

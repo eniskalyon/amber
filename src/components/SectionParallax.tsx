@@ -31,4 +31,6 @@ const SectionParallax = forwardRef<HTMLDivElement, SectionParallaxProps>(({ back
   );
 })
 
+SectionParallax.displayName = 'SectionParallax';
+
 export default SectionParallax;
