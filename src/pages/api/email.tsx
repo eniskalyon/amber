@@ -75,7 +75,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
            
            
       const msg = {
-        to: 'eniskalyon@gmail.com', // Change to your recipient
+        to: 'info@amberaccidentclaims.co.uk', // Change to your recipient
         from: 'cuneicoder@gmail.com', // Change to your verified sender
         subject: 'New Accident Report',
         text: `New Accident Report\\n\\n${emailContent}`,
