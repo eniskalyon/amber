@@ -9,6 +9,7 @@ import PersonalInjury from "@/components/personalInjury";
 import SectionDivider from "@/components/section-divider";
 import Services from "@/components/services";
 import { EmailComponent } from "@/components/contactTest";
+import Plaque from "@/components/plaque";
 
 export default function Home() {
 
@@ -17,6 +18,7 @@ export default function Home() {
     <main className="flex flex-col items-center px-4 min-h-screen">
     
      <Hero key="home" />
+     <Plaque />
      <Brief />
      <SectionDivider />
      <Services key="services" />

@@ -5,6 +5,7 @@ import { useSectionInView } from '@/lib/hooks';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faMapPin } from '@fortawesome/free-solid-svg-icons';
 import CallUsButton from './CallUsButton';
+import Image from 'next/image';
 
 export default function Hero() {
 
@@ -52,6 +53,24 @@ const { ref } = useSectionInView('Home');
     <p className=''>Alum Rock: 374 Alum Rock Rd, B8 3DA</p>
   </span>
 </div>
+
+<Image
+  src="/enterprise-badge.png"
+  alt="Enterprise Badge"
+  width={300}
+  height={300}
+  priority
+  className="
+  absolute
+  z-10
+  w-48
+  drop-shadow-xl
+  pointer-events-none select-none
+  top-[-11rem] right-6
+  lg:w-64 lg:top-[-15rem] lg:left-1/2 lg:right-auto lg:-translate-x-1/2
+"
+
+/>
 
 
       </div>
