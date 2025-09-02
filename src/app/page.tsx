@@ -9,7 +9,7 @@ import PersonalInjury from "@/components/personalInjury";
 import SectionDivider from "@/components/section-divider";
 import Services from "@/components/services";
 import { EmailComponent } from "@/components/contactTest";
-import Plaque from "@/components/plaque";
+import Plaque from "@/components/Plaque";
 
 export default function Home() {
 
