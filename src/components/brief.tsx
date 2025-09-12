@@ -29,8 +29,10 @@ export default function Brief() {
           exit="exit"
           variants={springVariants}
         >
-          <Image src="/fca.jpg" alt="Service 1" width={500} height={300} />
-          <h2 className="font-semibold text-lg mt-4 md:mt-9">FCA Regulated</h2>
+          <div className="w-[500px] h-[300px] flex items-center justify-center">
+            <span className="font-bold text-5xl">FCA Regulated</span>
+          </div>
+          <h2 className="font-semibold text-lg mt-4 md:mt-9">Firm reference number: 830521</h2>
         </motion.div>
         {/* Card 2 */}
         <motion.div className="bg-white rounded-lg shadow-md p-6 flex flex-col items-center justify-center"
