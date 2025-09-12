@@ -20,7 +20,7 @@ export default function Brief() {
 
 
   return (
-    <section className='mb-28 max-w-[50rem] text-center sm:mb-0 scroll-mt-[100rem] relative w-full flex flex-col items-center justify-center'>
+    <section className='mt-6 mb-28 max-w-[50rem] text-center sm:mb-0 scroll-mt-[100rem] relative w-full flex flex-col items-center justify-center'>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
         {/* Card 1 */}
         <motion.div className="bg-white rounded-lg shadow-md p-6 flex flex-col items-center justify-center"
@@ -29,8 +29,8 @@ export default function Brief() {
           exit="exit"
           variants={springVariants}
         >
-          <div className="w-[500px] h-[300px] flex items-center justify-center">
-            <span className="font-bold text-5xl">FCA Regulated</span>
+          <div className="w-full max-w-[500px] aspect-[5/3] flex items-center justify-center">
+            <span className="font-bold text-2xl sm:text-3xl md:text-5xl">FCA Regulated</span>
           </div>
           <h2 className="font-semibold text-lg mt-4 md:mt-9">Firm reference number: 830521</h2>
         </motion.div>
